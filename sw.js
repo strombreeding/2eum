@@ -1,7 +1,7 @@
 const CACHE_NAME = 'woolta-blog-cache-v1'; // 캐쉬 이름을 설정합니다.
 
 const FILES_TO_CACHE = [
-    'offline.html', // 캐쉬할 페이지 or 파일 들을 설정합니다.
+    '/offline.html', // 캐쉬할 페이지 or 파일 들을 설정합니다.
 ];
 
 self.addEventListener('install', (event) => {
@@ -21,6 +21,6 @@ self.addEventListener('fetch', (event) => {
         fetch(event.request)
             .catch(() => {
                 return caches.open(CACHE_NAME)
-                    .then((cache) => cache.match('offline.html'));
+                    .then((cache) => cache.match('/2eum/offline.html'));
             }))
 });
