@@ -2,14 +2,16 @@
 <html lang="ko">
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="/assets/css/styles.css"/>
-    <link rel="manifest" href="/manifest.json"/>
+    <link rel="stylesheet" href="static/css/styles.css"/>
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="apple-touch-icon" href="static/icons/ios/152.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="module">import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-const el = document.createElement('pwa-update');
-document.body.appendChild(el);
+    <script type="module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
     </script>
   </head>
   <body> 
