@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module">import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+    </script>
   </head>
   <body> 
     <header> 
@@ -17,8 +21,4 @@
     </main>
     <footer>&rarr 푸터</footer>
   </body>
-  <script type="module">import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-const el = document.createElement('pwa-update');
-document.body.appendChild(el);
-  </script>
 </html>
