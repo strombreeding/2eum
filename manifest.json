@@ -8,7 +8,6 @@
   "scope": "/",
   "short_name": "2eum",
   "start_url": "https://strombreeding.github.io/2eum/",
-  "theme_color": "none",
   "icons": [
     {
       "src": "images/windows11/SmallTile.scale-100.png",
