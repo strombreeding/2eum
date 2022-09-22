@@ -1,12 +1,12 @@
 {
-  "background_color": "#333333",
+  "background_color": "#181818",
   "dir": "auto",
   "lang":"ko",
   "display": "fullscreen",
-  "name": "청년공간 이음",
+  "name": "wetube_sosial",
   "orientation": "any",
   "scope": "/",
-  "short_name": "2eum",
+  "short_name": "wetube",
   "start_url": "https://strombreeding.github.io/2eum/",
   "icons": [
     {
