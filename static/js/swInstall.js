@@ -7,13 +7,12 @@ if ('serviceWorker' in navigator) {
             .catch(e => console.log(e));
     });
 }
-const load = ()=>{
-    $ajax({
-        type:"get",
-        url : "http://jinytree.shop/",
-        success : (res)=>{
-            console.log(res)
+window.addEventListener("load",()=>{
+    $.ajax({
+        url: "http://jinytree.shop/",
+        type: "GET",
+        success: function(response){
+            console.log(response);
         }
-    })
-
-}
+    });
+})
