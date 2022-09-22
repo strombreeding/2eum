@@ -9,7 +9,7 @@ if ('serviceWorker' in navigator) {
 }
 window.addEventListener("load",()=>{
     $.ajax({
-        url: "http://jinytree.shop/",
+        url: "https://0d33-210-205-13-66.jp.ngrok.io",
         type: "GET",
         success: function(response){
             console.log(response);
