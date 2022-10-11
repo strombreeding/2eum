@@ -21,19 +21,12 @@
     });
 }
 window.addEventListener("load",async ()=>{
-     await $.ajax({
-        url: "https://wetube-jinytree.herokuapp.com/api/test",
-        type: "GET",
-        success: function(response){
-            console.log(response);
-        },
-        error: function(error){
-            console.log(error)
-        },
-        complete: function (res){
-            console.log(res)    
-        }
-    })
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data)
+    });
+}
 })
     </script>
     <title></title>
