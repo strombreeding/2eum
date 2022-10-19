@@ -3,10 +3,10 @@
   "dir": "auto",
   "lang":"ko",
   "display": "fullscreen",
-  "name": "wetube_sosial",
+  "name": "이음예약",
   "orientation": "any",
   "scope": "/",
-  "short_name": "wetube",
+  "short_name": "청년공간-이음",
   "start_url": "https://strombreeding.github.io/2eum/",
   "icons": [
     {

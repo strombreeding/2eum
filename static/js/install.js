@@ -34,22 +34,3 @@ btnSave.addEventListener('click', function() {
     });
   }
 });
-const zzz = document.querySelector("#zz")
-const zz = (e)=>{
-  e.preventDefault()
-console.log("바뀌는거감지")
-const form = document.getElementById("zz") 
-const formData = new FormData(form)
-$.ajax({
-    type:"POST",
-    url:`https://0d33-210-205-13-66.jp.ngrok.io`,
-    data:formData,
-    dataType:"JSON",
-    processData:false,
-    contentType:false,
-    success : (response)=>{
-        console.log(response)
-    }
-})
-}
-zzz.addEventListener("submit",zz)

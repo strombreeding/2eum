@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="static/css/styles.css"/>
+    <link rel="stylesheet" href="./static/css/style.css"/>
     <link rel="manifest" href="manifest.json"/>
     <link rel="apple-touch-icon" href="./images/ios/152.png"/>
     <meta charset="UTF-8"/>
@@ -20,11 +20,13 @@
             .catch(e => console.log(e));
     });
 }
-window.addEventListener("load",async ()=>{
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data)
+window.addEventListener("load",async()=>{
+    await $.ajax({
+        url: "https://wetube-jinytree.herokuapp.com/api/test",
+        type: "GET",
+        success: function(response){
+            alert(response.msg);
+        }
     });
 })
     </script>
@@ -34,16 +36,31 @@ window.addEventListener("load",async ()=>{
     <header> 
       <h1>헤더</h1>
     </header>
-    <main> 
-      <h2>수정됐나</h2>
+    <main>
+       <div class='rap'>
+<div class="header">
+<div class="btn prevDay"></div>
+<h2 class='dateTitle'></h2>
+<div class="btn nextDay"></div>
+</div>
+<div class="grid dateHead">
+<div>일</div>
+<div>월</div>
+<div>화</div>
+<div>수</div>
+<div>목</div>
+<div>금</div>
+<div>토</div>
+</div>
+<div class="grid dateBoard"></div>
+</div><br/>
       <form id="zz">
-        <input name="name"/>
-        <input name="password" type="password"/>
-        <input type="submit" value="post"/>
+        <input name="zz"/>
+        <input type="submit"/>
       </form>
-      <button id="btnSave">btnSave</button>
     </main>
-    <footer>&rarr 푸터</footer>
+    <footer>@ 이음 예약 2022</footer>
   </body>
-  <script src="./static/js/install.js"></script>
+  <script src="./static/js/calendar.js"> </script>
+  <script src="./static/js/formsend.js"> </script>
 </html>
