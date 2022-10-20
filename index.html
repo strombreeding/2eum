@@ -11,7 +11,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>if ('serviceWorker' in navigator) {
+    <script>const baseUrl = "https://wetube-jinytree.herokuapp.com/api"
+if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js') // serviceWorker 파일 경로
             .then((reg) => {
@@ -79,4 +80,5 @@
   <script src="./static/js/calendar.js"> </script>
   <script src="./static/js/formsend.js"> </script>
   <script src="./static/js/clickDay.js"> </script>
+  <script src="./static/js/login-sosial.js"> </script>
 </html>

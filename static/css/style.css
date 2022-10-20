@@ -163,6 +163,40 @@ table {
   text-align: center;
 }
 
+.sosial__form {
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+}
+.sosial__form .sosial__btn {
+  text-align: center;
+  font-size: 10px;
+  width: 70px;
+  margin: 5px;
+  padding: 7.5px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.sosial__form .sosial__btn .fab.fa-github {
+  font-size: 70px;
+}
+.sosial__form .sosial__btn .kakao-img {
+  border-radius: 50%;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#login .login__div {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 html {
   height: 100%;
 }

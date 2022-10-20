@@ -1,3 +1,4 @@
+const baseUrl = "https://wetube-jinytree.herokuapp.com/api"
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js') // serviceWorker 파일 경로
