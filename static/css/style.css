@@ -162,3 +162,24 @@ table {
   flex-direction: column;
   text-align: center;
 }
+
+html {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .home__btn {
+  padding: 10px;
+}
+header .header__list {
+  padding: 10px;
+}
+
+footer {
+  text-align: center;
+  bottom: 1px;
+}

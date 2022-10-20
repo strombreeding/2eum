@@ -2,7 +2,7 @@
 
 var date = new Date(); // 달력 생성
 
-var currentMonth = {};
+var currentMonth = date;
 
 var makeCalendar = function makeCalendar(date) {
   // 현재의 년도와 월 받아오기

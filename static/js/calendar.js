@@ -1,6 +1,6 @@
 const date = new Date();
 // 달력 생성
-let currentMonth = {}
+let currentMonth = date
 const makeCalendar = (date) => {
     // 현재의 년도와 월 받아오기
     const nowYear = new Date(date).getFullYear();
