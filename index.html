@@ -20,15 +20,15 @@
             .catch(e => console.log(e));
     });
 }
-window.addEventListener("load",async()=>{
-    await $.ajax({
-        url: "https://wetube-jinytree.herokuapp.com/api/test",
-        type: "GET",
-        success: function(response){
-            alert(response.msg);
-        }
-    });
-})
+// window.addEventListener("load",async()=>{
+//     await $.ajax({
+//         url: "https://wetube-jinytree.herokuapp.com/api/test",
+//         type: "GET",
+//         success: function(response){
+//             alert(response.msg);
+//         }
+//     });
+// })
     </script>
     <title></title>
   </head>
@@ -54,13 +54,22 @@ window.addEventListener("load",async()=>{
 </div>
 <div class="grid dateBoard"></div>
 </div><br/>
-      <form class="zzz" id="zz2">
-        <input id="zz"/>
-        <input type="submit"/>
-      </form>
+      <div class="ticket_plate">
+        <div class="ticket_time">
+          <h2>시간대</h2>
+        </div>
+        <div class="ticket_final">
+          <h2>예약하기</h2>
+          <form class="zzz" id="zz">
+            <input type="text" name="날짜" readonly="readonly" value=""/>
+            <input type="submit"/>
+          </form>
+        </div>
+      </div>
     </main>
     <footer>@ 이음 예약 2022</footer>
   </body>
   <script src="./static/js/calendar.js"> </script>
   <script src="./static/js/formsend.js"> </script>
+  <script src="./static/js/clickDay.js"> </script>
 </html>

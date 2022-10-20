@@ -137,3 +137,28 @@ table {
     padding: 0;
   }
 }
+.ticket_plate {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}
+.ticket_plate [name=날짜] {
+  border: 0;
+  background-color: none;
+  text-align: center;
+}
+.ticket_plate .ticket_time {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.ticket_plate .ticket_time p {
+  padding: 10px;
+}
+.ticket_plate .ticket_final {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

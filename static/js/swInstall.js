@@ -7,12 +7,12 @@ if ('serviceWorker' in navigator) {
             .catch(e => console.log(e));
     });
 }
-window.addEventListener("load",async()=>{
-    await $.ajax({
-        url: "https://wetube-jinytree.herokuapp.com/api/test",
-        type: "GET",
-        success: function(response){
-            alert(response.msg);
-        }
-    });
-})
+// window.addEventListener("load",async()=>{
+//     await $.ajax({
+//         url: "https://wetube-jinytree.herokuapp.com/api/test",
+//         type: "GET",
+//         success: function(response){
+//             alert(response.msg);
+//         }
+//     });
+// })

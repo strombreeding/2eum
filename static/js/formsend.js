@@ -4,14 +4,16 @@ const zz = async(e)=>{
   const form = document.getElementById("zz") 
   const a = form.value
   console.log(a)
-  await $.ajax({
-      type:"Post",
-      url:`https://wetube-jinytree.herokuapp.com/api/test`,
-      data:{a},
-      dataType:"JSON",
-      success : (response)=>{
-          alert(response.data.a)
-      }
-  })
+  // await $.ajax({
+  //     type:"Post",
+  //     url:`https://wetube-jinytree.herokuapp.com/api/test`,
+  //     data:{a},
+  //     dataType:"JSON",
+  //     success : (response)=>{
+  //         alert(response.data.a)
+  //     }
+  // })
 }
 zzz.addEventListener("submit",zz)
+
+

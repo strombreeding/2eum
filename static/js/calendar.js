@@ -21,11 +21,12 @@ const makeCalendar = (date) => {
       htmlDummy += `<div class="noColor"></div>`;
     }
   
-    // 현재 날짜 표시하기
-    for (let i = 1; i <= lastDay; i++) {    
-      htmlDummy += `<div>${i}</div>`;
+    // 현재 날짜 표시하기 및 날짜 클릭
+    for (let i = 1; i <= lastDay; i++) { 
+      htmlDummy += `<div class="div" id='${i}' onclick=click_day(this.id)>${i}</div>`;
     }
-  
+
+
     // 다음달 날짜 표시하기
     for (let i = limitDay; i < nextDay; i++) {
       htmlDummy += `<div class="noColor"></div>`;
