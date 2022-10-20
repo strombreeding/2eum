@@ -1,4 +1,6 @@
+const date = new Date();
 // 달력 생성
+let currentMonth = {}
 const makeCalendar = (date) => {
     // 현재의 년도와 월 받아오기
     const nowYear = new Date(date).getFullYear();
@@ -35,18 +37,25 @@ const makeCalendar = (date) => {
     document.querySelector(`.dateBoard`).innerHTML = htmlDummy;
     document.querySelector(`.dateTitle`).innerText = `${nowYear}년 ${nowMonth}월`;
   }
+const  click_day= (id)=>{
+  const FullYear =currentMonth.getFullYear()
+  const Month = currentMonth.getMonth()+1
+  const Day = id
+  const input = document.getElementsByName("날짜")[0]
+  input.value=`${FullYear}년 ${Month}월 ${Day}일`
+}
   
-  
-  const date = new Date();
   
   makeCalendar(date);
   
   // 이전달 이동
   document.querySelector(`.prevDay`).onclick = () => {
-  makeCalendar(new Date(date.setMonth(date.getMonth() - 1)));
+  currentMonth=new Date(date.setMonth(date.getMonth() - 1))
+  makeCalendar(currentMonth);
   }
   
   // 다음달 이동
   document.querySelector(`.nextDay`).onclick = () => {
-  makeCalendar(new Date(date.setMonth(date.getMonth() + 1)));
+  currentMonth=new Date(date.setMonth(date.getMonth() + 1))
+  makeCalendar(currentMonth);
   }
