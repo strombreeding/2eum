@@ -212,6 +212,14 @@ html {
 #header .header__list {
   padding: 10px;
 }
+#header .header__profile {
+  cursor: pointer;
+}
+#header .header__profile .header__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
 
 footer {
   text-align: center;
