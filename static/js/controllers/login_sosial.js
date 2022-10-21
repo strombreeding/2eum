@@ -7,13 +7,13 @@ const login__google = async()=>{
             type: "GET",
             success: function(res){
                 console.log(res)
-                console.log(res.msg)
-                console.log(res.statusCode)
-                console.log(res.data)
-                alert(`${res.msg}\n${res.statusCode}\n${res.data}`)
-                }
-            });
+                document.cookie =`AccessToken=${res.data.sessionId};`
+                localStorage.setItem("loggedIn","true")
+                location.href="http://127.0.0.1:5500/"
+            }
+        });
 }
+
 window.addEventListener("load",login__google)
 // const login__kakao = async()=>{
     

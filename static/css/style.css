@@ -201,15 +201,15 @@ html {
   height: 100%;
 }
 
-header {
+#header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-header .home__btn {
+#header .home__btn {
   padding: 10px;
 }
-header .header__list {
+#header .header__list {
   padding: 10px;
 }
 

@@ -25,6 +25,11 @@ const login__view = ()=>{
   `
   home.className="hidden"
 }
+const logout = async ()=>{
+  document.cookie="AccessToken=none;expires=Thu, 01 Jan 1999 00:00:10 GMT;"
+  localStorage.removeItem("loggedIn")
+  location.reload()
+}
 
 {/* <div class="login__div">
 <small>소셜 로그인</small>
