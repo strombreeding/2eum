@@ -83,7 +83,7 @@ const kakao_finish = async()=>{
 
 const loginStart = async()=>{
     if(localStorage.getItem("sosial") === "google"){
-        login__google()
+        await login__google()
     }else if (localStorage.getItem("sosial") === "kakao"){
         await key()
         await login__kakao()
