@@ -6,7 +6,7 @@ if(loggedIn){
     </div>
     <div class="header__list">
       <span class="header__profile" onclick="mypage()">
-        <img class="header__avatar" src=${localStorage.getItem("avatarUrl")} crossorigin="Anonymous" id="header__avatar"/>
+        <img class="header__avatar" src=${localStorage.getItem("avatarUrl")} crossorigin="anonymous" id="header__avatar"/>
       </span>
       <button class="login" onclick="logout()">로그아웃</button>
     </div>
