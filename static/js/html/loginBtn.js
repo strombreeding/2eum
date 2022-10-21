@@ -36,9 +36,10 @@ const kakao = async ()=>{
 //href="https://wetube-jinytree.herokuapp.com/2eum/google/start"
 const logout = async ()=>{
   document.cookie="access_token=none;expires=Thu, 01 Jan 1999 00:00:10 GMT;"
-  localStorage.removeItem("loggedIn")
-  localStorage.removeItem("avatarUrl")
-  localStorage.removeItem("sosial")
+  // localStorage.removeItem("loggedIn")
+  // localStorage.removeItem("avatarUrl")
+  // localStorage.removeItem("sosial")
+  localStorage.clear()
   location.reload()
 }
 

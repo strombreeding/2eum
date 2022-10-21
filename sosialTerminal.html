@@ -13,12 +13,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./static/js/html/loginBtn.js"> </script>
     <title></title>
-    <script>const loggedIn = localStorage.getItem("loggedIn")==="true"</script>
+    <script>
+      const loggedIn = localStorage.getItem("loggedIn")==="true"
+      let restKey ;
+      let url;
+    </script>
   </head>
   <body> 
     <header id="header"></header>
     <h2>ㅎㅇ</h2>
+    <div class="spinnerBox">
+      <div class="spinner"><i class="fas fa-spinner fa-10x"></i></div>
+    </div>
     <footer>@ 이음 예약 2022</footer>
   </body>
   <script src="./static/js/controllers/login_sosial.js"> </script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"> </script>
 </html>
