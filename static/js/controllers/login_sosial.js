@@ -11,7 +11,7 @@ const login__google = async()=>{
                 document.cookie =`access_token=${res.data.sessionId};`
                 localStorage.setItem("loggedIn","true")
                 localStorage.setItem("avatarUrl",`${res.data.avatarUrl}`)
-                location.href="/"
+                location.href="/2eum"
             }
         });
 }
@@ -75,7 +75,7 @@ const kakao_finish = async()=>{
             document.cookie=`${name}=${value};expires=${expires}`
             localStorage.setItem("loggedIn","true")
             localStorage.setItem("avatarUrl",`${res.data.avatarUrl}`)
-            location.href="/"
+            location.href="/2eum"
         }
     })
 }
