@@ -5,12 +5,18 @@ const home__view = ()=>{
   login.innerHTML=``      
   console.log("home__view")
 }
-const login__view = ()=>{
+const login__view = async()=>{
+  const article=document.getElementsByTagName("article")[0]
+  while(article.hasChildNodes()){
+    article.removeChild(article.firstChild)
+  }
   console.log("login__view")
-  const home = document.getElementById("home")
   const login = document.getElementById("login")
   login.innerHTML=`
   <div class="login__div">
+  <br>
+  <br>
+  <br>
   <small>소셜 로그인</small>
   <form class="sosial__form">
     <a class="sosial__btn" onclick="google()">
@@ -23,8 +29,9 @@ const login__view = ()=>{
   </form>
   </div>
   `
-  home.className="hidden"
 }
+
+
 const google = async ()=>{
   localStorage.setItem("sosial","google")
   location.href = "https://wetube-jinytree.herokuapp.com/2eum/google/start"

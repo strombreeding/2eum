@@ -293,6 +293,45 @@ table {
     transform: rotate(360deg);
   }
 }
+[name=click__day] {
+  position: absolute;
+  z-index: 2;
+  top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+[name=click__day] div {
+  padding: 10px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #EA7667;
+}
+[name=click__day] div #dayTicketing {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #EA9C5E;
+}
+[name=click__day] div div {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+[name=click__day] div div a {
+  text-decoration: none;
+  color: black;
+}
+
 html {
   background-color: #978D71;
   height: 100%;
@@ -335,4 +374,11 @@ footer {
 
 .hidden {
   display: none;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }

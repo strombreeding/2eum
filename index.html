@@ -21,7 +21,17 @@
   </head>
   <body> 
     <header id="header"></header>
-    <main> 
+    <main>
+      <article></article>
+      <section class="hidden" name="click__day">
+        <div>예약 현황
+          <div id="dayTicketing"> 
+            <li>이렇게 나열됩니다</li>
+            <li>이렇게 나열됩니다</li>
+          </div>
+          <div> <a onclick="cancel()">취소</a><a onclick="accept()">계속  </a></div>
+        </div>
+      </section>
       <section id="home"><div class='rap'>
 <div class="header">
 <div class="btn prevDay"></div>
@@ -58,9 +68,10 @@
     </main>
     <footer>@ 이음 예약 2022</footer>
   </body>
-  <script src="./static/js/swInstall.js"></script>
-  <script src="./static/js/install.js"></script>
-  <script src="./static/js/html/calendar.js"> </script>
-  <script src="./static/js/html/header.js"> </script>
-  <script src="./static/js/formsend.js"> </script>
+  <script src="./static/js/swInstall.js" defer="defer"></script>
+  <script src="./static/js/install.js" defer="defer"></script>
+  <script src="./static/js/html/calendar.js" defer="defer"></script>
+  <script src="./static/js/html/header.js" defer="defer"></script>
+  <script src="./static/js/html/ticketing.js" defer="defer"></script>
+  <script src="./static/js/formsend.js" defer="defer"></script>
 </html>

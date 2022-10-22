@@ -8,7 +8,7 @@ const login__google = async()=>{
             type: "GET",
             success: function(res){
                 console.log(res)
-                document.cookie =`access_token=${res.data.sessionId};`
+                document.cookie =`access_token=${res.data.access_token};`
                 localStorage.setItem("loggedIn","true")
                 localStorage.setItem("avatarUrl",`${res.data.avatarUrl}`)
                 location.href="/2eum"
@@ -69,7 +69,7 @@ const kakao_finish = async()=>{
             access_token
         },
         success:(res)=>{
-            const value = res.data.sessionId;
+            const value = res.data.access_token;
             localStorage.setItem("access_token",`${value}`)
             localStorage.setItem("loggedIn","true")
             localStorage.setItem("avatarUrl",`${res.data.avatarUrl}`)
