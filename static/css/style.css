@@ -59,6 +59,30 @@ table {
   margin-top: 0.3rem;
   padding: 1rem;
 }
+.rap .show__status {
+  display: flex;
+  flex-direction: row;
+}
+.rap .show__status span {
+  font-size: 25px;
+  margin-right: 10px;
+}
+.rap .show__status span small1 {
+  font-size: 25px;
+  color: #25c9f7;
+}
+.rap .show__status span small2 {
+  font-size: 25px;
+  color: #54d11f;
+}
+.rap .show__status span small3 {
+  font-size: 25px;
+  color: #f1f42c;
+}
+.rap .show__status span small4 {
+  font-size: 25px;
+  color: #f72525;
+}
 
 .dateHead {
   margin-bottom: 0.4rem;
@@ -70,14 +94,13 @@ table {
 
 .dateHead div {
   background-color: #978D71;
-  color: #fff;
+  color: black;
   text-align: center;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-gap: 3px;
 }
 
 .grid div {
@@ -86,7 +109,7 @@ table {
 }
 
 .dateBoard div {
-  color: #fff;
+  color: black;
   font-weight: bold;
   border-radius: 0.6rem;
   border: 1px solid #eee;
@@ -316,8 +339,10 @@ table {
 [name=click__day] div #dayTicketing {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 90%;
-  padding: 10px 0;
+  height: 100%;
+  padding: 30px 0;
   border-radius: 10px;
   background-color: #EA9C5E;
 }
@@ -340,6 +365,7 @@ html {
 * {
   font-size: 30px;
   font-family: "Nanum Pen Script", cursive;
+  color: black;
 }
 
 button {
@@ -348,6 +374,10 @@ button {
 }
 
 #header {
+  position: sticky;
+  top: 0;
+  z-index: 19;
+  background-color: #978D71;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -373,6 +403,10 @@ footer {
 }
 
 .hidden {
+  display: none;
+}
+
+[name=hidden] {
   display: none;
 }
 

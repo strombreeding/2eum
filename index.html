@@ -24,12 +24,10 @@
     <main>
       <article></article>
       <section class="hidden" name="click__day">
-        <div>예약 현황
-          <div id="dayTicketing"> 
-            <li>이렇게 나열됩니다</li>
-            <li>이렇게 나열됩니다</li>
-          </div>
-          <div> <a onclick="cancel()">취소</a><a onclick="accept()">계속  </a></div>
+        <div>
+          <h2>예약 현황</h2>
+          <div id="dayTicketing"> </div>
+          <div> <a id="cancel" onclick="cancel()">취소</a><a id="accept" onclick="accept(this.id)">계속  </a></div>
         </div>
       </section>
       <section id="home"><div class='rap'>
@@ -38,7 +36,11 @@
 <h2 class='dateTitle'></h2>
 <div class="btn nextDay"></div>
 </div>
-<div class="grid dateHead">
+        <div class="show__status"><span>쾌적
+            <small1>●</small1></span><br/><span>원활
+            <small2>●</small2></span><br/><span>보통
+            <small3>●</small3></span><br/><span>혼잡
+            <small4>●</small4></span><br/></div><div class="grid dateHead">
 <div id="sunday">일</div>
 <div>월</div>
 <div>화</div>
@@ -49,12 +51,8 @@
 </div>
 <div class="grid dateBoard"></div>
 </div><br/>
-        <div class="ticket_plate">
-          <div class="ticket_time">
-            <h2>시간대</h2>
-            <div class="timetable"></div>
-          </div>
-          <div class="ticket_final">
+        <div class="ticket_plate"><br/><br/><br/><br/><br/><br/><br/>
+          <div class="hidden" id="ticket_final" name="hidden">
             <h2>예약하기</h2>
             <form class="ticket__form" id="zz"><small>날짜
                 <input type="text" name="날짜" readonly="readonly" value=""/></small><small>시간 

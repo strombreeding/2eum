@@ -11,6 +11,7 @@ const login__google = async()=>{
                 document.cookie =`access_token=${res.data.access_token};`
                 localStorage.setItem("loggedIn","true")
                 localStorage.setItem("avatarUrl",`${res.data.avatarUrl}`)
+                localStorage.setItem("access_token",`${res.data.access_token}`)
                 location.href="/2eum"
             }
         });

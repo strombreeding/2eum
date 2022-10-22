@@ -2,7 +2,10 @@ const header = document.getElementById("header")
 if(loggedIn){
     header.innerHTML=`
     <div class="home__btn">
-      <button class="home" onclick="home__view()">홈</button>
+      <button class="home" onclick="home__view()">이음예약
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb179355a-4cdc-4f94-a929-e329daae69fe%2F1234.png?table=block&id=3290ece0-681a-4c6c-ad02-13da56a3d8f9&spaceId=beaa8bbc-f504-4c20-b220-9fc699f70e12&width=2000&userId=14cc2ef3-04b9-41f7-9991-3bf06bfcb033&cache=v2"></img>
+      </button>
+      
     </div>
     <div class="header__list">
       <span class="header__profile" onclick="mypage()">
