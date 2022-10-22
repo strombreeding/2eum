@@ -1,19 +1,20 @@
-const zzz = document.querySelector(".zzz")
-const zz = async(e)=>{
+const ticket__form = document.querySelector(".ticket__form")
+const ticketing = async(e)=>{
   e.preventDefault()
-  const form = document.getElementById("zz") 
-  const a = form.value
-  console.log(a)
-  // await $.ajax({
-  //     type:"Post",
-  //     url:`https://wetube-jinytree.herokuapp.com/api/test`,
-  //     data:{a},
-  //     dataType:"JSON",
-  //     success : (response)=>{
-  //         alert(response.data.a)
-  //     }
-  // })
+  const access_token = localStorage.getItem("access_token")
+  const ticket = document.getElementsByName("날짜")[0].value;
+  const date = ticket.split(".")
+  console.log(date)
+  await $.ajax({
+      type:"post",
+      url:`http://localhost:4000/tickets`,
+      data:{date,access_token},
+      dataType:"JSON",
+      success : (res)=>{
+          console.log(res)
+      }
+  })
 }
-zzz.addEventListener("submit",zz)
+ticket__form.addEventListener("submit",ticketing)
 
 

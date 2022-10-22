@@ -69,9 +69,8 @@ const kakao_finish = async()=>{
             access_token
         },
         success:(res)=>{
-            const name = access_token;
             const value = res.data.sessionId;
-            document.cookie=`${name}=${value};`
+            localStorage.setItem("access_token",`${value}`)
             localStorage.setItem("loggedIn","true")
             localStorage.setItem("avatarUrl",`${res.data.avatarUrl}`)
             location.href="/2eum"

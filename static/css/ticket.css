@@ -1,0 +1,66 @@
+@charset "UTF-8";
+.ticket_plate {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket_plate [name=날짜] {
+  border: 0;
+  background-color: none;
+  text-align: center;
+  align-items: center;
+}
+.ticket_plate .ticket_time {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+}
+.ticket_plate .ticket_time p {
+  padding: 10px;
+}
+.ticket_plate .ticket_final {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.ticket_plate .ticket_final h2 {
+  margin-bottom: 15px;
+}
+.ticket_plate .ticket_final input {
+  border: none;
+  border-radius: 20px;
+  background-color: #FED56B;
+}
+.ticket_plate .ticket_final [name=날짜] {
+  border: solid 0.5px black;
+  background-color: #FED56B;
+  width: 50%;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.ticket_plate .timetable {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3px;
+  text-align: center;
+  align-items: center;
+}
+.ticket_plate .timetable a {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 30%;
+  text-align: center;
+}
+
+.ticket__form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  text-align: center;
+}

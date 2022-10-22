@@ -29,7 +29,7 @@
 <div class="btn nextDay"></div>
 </div>
 <div class="grid dateHead">
-<div>일</div>
+<div id="sunday">일</div>
 <div>월</div>
 <div>화</div>
 <div>수</div>
@@ -42,12 +42,14 @@
         <div class="ticket_plate">
           <div class="ticket_time">
             <h2>시간대</h2>
+            <div class="timetable"></div>
           </div>
           <div class="ticket_final">
             <h2>예약하기</h2>
-            <form class="zzz" id="zz">
-              <input type="text" name="날짜" readonly="readonly" value=""/>
-              <input type="submit"/>
+            <form class="ticket__form" id="zz"><small>날짜
+                <input type="text" name="날짜" readonly="readonly" value=""/></small><small>시간 
+                <input type="text" name="날짜" readonly="readonly" value=""/></small>
+              <input type="submit" value="예약"/>
             </form>
           </div>
         </div><br/>
