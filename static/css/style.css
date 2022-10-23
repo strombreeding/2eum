@@ -381,12 +381,16 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 5px;
 }
 #header .home__btn {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 #header .header__list {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 #header .header__profile {
   cursor: pointer;

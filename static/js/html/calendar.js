@@ -1,6 +1,7 @@
 const date = new Date();
 // 달력 생성
 let currentMonth = date
+let Month
 let Day ;
 // 로드시 캘린더 구현
 const makeCalendar = async(date) => {
@@ -41,12 +42,20 @@ const makeCalendar = async(date) => {
   
   document.querySelector(`.dateBoard`).innerHTML = htmlDummy;
   document.querySelector(`.dateTitle`).innerText = `${nowYear}년 ${nowMonth}월`;
-
+  console.log("이제 어웨이트 들어간다")
   // 이번달 티켓팅 불러옴 (날짜,이름)
   const tickets = await $.ajax({
-    url:`https://${abc}/tickets?year=${nowYear}&month=${nowMonth}`,
+    // url:`http://localhost:4000/tickets?year=${nowYear}&month=${nowMonth}`,
+    // url:`https://${abc}/tickets?year=${nowYear}&month=${nowMonth}`,
+    url:`http://${abc}/tickets?year=${nowYear}&month=${nowMonth}`,
     type:"GET",
+    seccess:(res)=>{
+      console.log(res)
+      alert(res)
+    }
   })
+  console.log(tickets)
+  console.log(" 어웨이트 나왔다")
   // 아래 포문은 캘린더 날짜에 data-cnt 를 1 증가시켜줌.
   for (let i = 0; i < tickets.length; i++) {
     const ticketDay = tickets[i].day
@@ -76,6 +85,8 @@ if(localStorage.getItem("loggedIn")==="true"){
   document.querySelector(`.prevDay`).onclick = () => {
   currentMonth=new Date(date.setMonth(date.getMonth() - 1))
   Month-=1
+console.log(Month)
+
   makeCalendar(currentMonth);
   }
   
@@ -83,6 +94,8 @@ if(localStorage.getItem("loggedIn")==="true"){
   document.querySelector(`.nextDay`).onclick = () => {
   currentMonth=new Date(date.setMonth(date.getMonth() + 1))
   Month+=1
+console.log(Month)
+
   makeCalendar(currentMonth);
   }
 }else{
@@ -115,8 +128,11 @@ const  click_day= async(id)=>{
   const FullYear = document.getElementsByClassName("dateTitle")[0].textContent.substring(0,4)
   const Month = currentMonth.getMonth()+1
   Day = id
+  console.log(FullYear,Month,Day)
   const dayData = await $.ajax({ // 서버에서 티켓 서치/ url /tickets?year=YY&month=MM
-    url:`https://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
+    // url:`http://localhost:4000/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
+    // url:`https://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
+    url:`http://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
     type:"get",
     success:(res)=>{
       console.log(res)
