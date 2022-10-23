@@ -42,20 +42,24 @@ const kakao = async ()=>{
 }
 //href="https://wetube-jinytree.herokuapp.com/2eum/google/start"
 const logout = async ()=>{
-  // await $.ajax({
-  //   url:'서버',
-  //   type:"post",
-  //   data:{access_token:localStorage.getItem("access_token")},
-  //   success:(res)=>{
-  //     alert(res.msg);
-  //     localStorage.clear()
-  //     location.reload()
-  //     // 서버에서 토큰 밸류(session id)를 db.session 에서 조회후 삭제함.
-  //     // 서버에선 미들웨어
-  //   }
-  // })
-  localStorage.clear()
-  location.reload()
+  await $.ajax({
+    url:'https://wetube-jinytree.herokuapp.com/2eum/',
+    type:"delete",
+    data:{sessionId:localStorage.getItem("sessionId")},
+    success:(res)=>{
+      alert(res.msg);
+      localStorage.clear()
+      location.reload()
+      // 서버에서 토큰 밸류(session id)를 db.session 에서 조회후 삭제함.
+      // 서버에선 미들웨어
+    },
+    error:(err)=>{
+      console.log(err)
+      localStorage.clear()
+      location.reload()
+      alert("음..이상함 발견, 그래도 로그아웃완료")
+    }
+  })
   // document.cookie="access_token=none;expires=Thu, 01 Jan 1999 00:00:10 GMT;"
   // localStorage.removeItem("loggedIn")
   // localStorage.removeItem("avatarUrl")

@@ -12,6 +12,7 @@ const login__google = async()=>{
                 localStorage.setItem("loggedIn","true")
                 localStorage.setItem("avatarUrl",`${res.data.avatarUrl}`)
                 localStorage.setItem("access_token",`${res.data.access_token}`)
+                localStorage.setItem("sessionId",`${res.data.sessionId}`)
                 location.href="/2eum"
             }
         });
@@ -74,6 +75,7 @@ const kakao_finish = async()=>{
             localStorage.setItem("access_token",`${value}`)
             localStorage.setItem("loggedIn","true")
             localStorage.setItem("avatarUrl",`${res.data.avatarUrl}`)
+            localStorage.setItem("sessionId",`${res.data.sessionId}`)
             location.href="/2eum"
         }
     })
