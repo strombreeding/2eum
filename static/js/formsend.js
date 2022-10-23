@@ -10,8 +10,8 @@ const ticketing = async(e)=>{
     console.log(date)
     await $.ajax({
         type:"post",
-        // url:`https://${abc}/tickets`,
-        url:`http://${abc}/tickets`,
+        url:`https://${abc}/tickets`,
+        // url:`http://${abc}/tickets`,
         data:{date,owner:access_token},
         dataType:"JSON",
         success : (res)=>{

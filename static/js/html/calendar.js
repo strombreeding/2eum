@@ -46,8 +46,8 @@ const makeCalendar = async(date) => {
   // 이번달 티켓팅 불러옴 (날짜,이름)
   const tickets = await $.ajax({
     // url:`http://localhost:4000/tickets?year=${nowYear}&month=${nowMonth}`,
-    // url:`https://${abc}/tickets?year=${nowYear}&month=${nowMonth}`,
-    url:`http://${abc}/tickets?year=${nowYear}&month=${nowMonth}`,
+    url:`https://${abc}/tickets?year=${nowYear}&month=${nowMonth}`,
+    // url:`http://${abc}/tickets?year=${nowYear}&month=${nowMonth}`,
     type:"GET",
     seccess:(res)=>{
       console.log(res)
@@ -131,8 +131,8 @@ const  click_day= async(id)=>{
   console.log(FullYear,Month,Day)
   const dayData = await $.ajax({ // 서버에서 티켓 서치/ url /tickets?year=YY&month=MM
     // url:`http://localhost:4000/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
-    // url:`https://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
-    url:`http://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
+    url:`https://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
+    // url:`http://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
     type:"get",
     success:(res)=>{
       console.log(res)
