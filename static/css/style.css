@@ -176,65 +176,85 @@ table {
     background-color: #E8997A;
   }
 }
-.ticket_plate {
+#ticket__section {
+  z-index: 3;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#ticket__section .ticket_plate {
+  background-color: black;
+  border-radius: 20px;
+  opacity: 0.8;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   align-items: center;
 }
-.ticket_plate [name=날짜] {
+#ticket__section .ticket_plate [name=날짜] {
   border: 0;
   background-color: none;
   text-align: center;
   align-items: center;
 }
-.ticket_plate .ticket_time {
+#ticket__section .ticket_plate .ticket_time {
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 80%;
 }
-.ticket_plate .ticket_time p {
+#ticket__section .ticket_plate .ticket_time p {
   padding: 10px;
 }
-.ticket_plate .ticket_final {
+#ticket__section .ticket_plate .ticket_final {
+  color: aliceblue;
   margin: 50px 0;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
 }
-.ticket_plate .ticket_final h2 {
+#ticket__section .ticket_plate .ticket_final h2 {
+  color: aliceblue;
   margin-bottom: 15px;
 }
-.ticket_plate .ticket_final input {
+#ticket__section .ticket_plate .ticket_final input {
+  color: aliceblue;
   border: none;
   border-radius: 20px;
-  background-color: #FED56B;
+  background-color: #978d71;
+  opacity: 1;
+  padding: 3px 5px;
 }
-.ticket_plate .ticket_final [name=날짜] {
+#ticket__section .ticket_plate .ticket_final [name=날짜] {
+  color: aliceblue;
   border: solid 0.5px black;
-  background-color: #FED56B;
+  background-color: black;
   width: 50%;
   margin: 10px 0;
   padding: 10px 0;
 }
-.ticket_plate .timetable {
+#ticket__section .ticket_plate .ticket_final small {
+  color: aliceblue;
+}
+#ticket__section .ticket_plate .timetable {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 3px;
   text-align: center;
   align-items: center;
 }
-.ticket_plate .timetable a {
+#ticket__section .ticket_plate .timetable a {
   cursor: pointer;
   padding: 5px;
   border-radius: 30%;
   text-align: center;
 }
-
-.ticket__form {
+#ticket__section .ticket__form {
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -376,7 +396,7 @@ button {
 #header {
   position: sticky;
   top: 0;
-  z-index: 19;
+  z-index: 10;
   background-color: #978D71;
   display: flex;
   flex-direction: row;
