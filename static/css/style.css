@@ -386,6 +386,11 @@ html {
   font-size: 30px;
   font-family: "Nanum Pen Script", cursive;
   color: black;
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}
+*:focus {
+  outline: none;
 }
 
 button {
