@@ -51,6 +51,25 @@ table {
   border-spacing: 0;
 }
 
+@keyframes splash_start {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: flex;
+  }
+}
+@keyframes splash_done {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
 /* 달력 */
 .rap {
   display: flex;
@@ -383,6 +402,7 @@ html {
 }
 
 #splash {
+  -webkit-animation: splash_start 1s, splash_done 2s 2s;
   animation: splash_start 1s, splash_done 2s 2s;
   width: 100%;
   display: flex;
@@ -401,25 +421,6 @@ html {
   height: 152px;
 }
 
-@keyframes splash_start {
-  from {
-    opacity: 0;
-    display: none;
-  }
-  to {
-    opacity: 1;
-    display: flex;
-  }
-}
-@keyframes splash_done {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    display: none;
-  }
-}
 * {
   font-size: 30px;
   font-family: "Nanum Pen Script", cursive;
