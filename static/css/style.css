@@ -113,8 +113,12 @@ table {
 
 .dateHead div {
   background-color: #978D71;
-  color: black;
   text-align: center;
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}
+.dateHead div:focus {
+  outline: none;
 }
 
 .grid {
@@ -128,7 +132,6 @@ table {
 }
 
 .dateBoard div {
-  color: black;
   font-weight: bold;
   border-radius: 0.6rem;
   border: 1px solid #eee;
@@ -136,6 +139,11 @@ table {
 
 .noColor {
   background: #EA7667;
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}
+.noColor:focus {
+  outline: none;
 }
 
 .header {
@@ -207,12 +215,23 @@ table {
 #ticket__section .ticket_plate {
   background-color: black;
   border-radius: 20px;
-  opacity: 0.8;
+  opacity: 0.95;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   align-items: center;
+}
+#ticket__section .ticket_plate #x {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  text-align: end;
+  justify-content: end;
+}
+#ticket__section .ticket_plate #x small {
+  padding: 15px 25px 0 0;
+  color: aliceblue;
 }
 #ticket__section .ticket_plate [name=날짜] {
   border: 0;
@@ -230,8 +249,7 @@ table {
   padding: 10px;
 }
 #ticket__section .ticket_plate .ticket_final {
-  color: aliceblue;
-  margin: 50px 0;
+  margin: 35px 0;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -279,6 +297,34 @@ table {
   width: 70%;
   align-items: center;
   text-align: center;
+}
+
+#dayTicketing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: px;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  padding: 30px 0;
+  border-radius: 10px;
+  background-color: #EA9C5E;
+}
+#dayTicketing div a {
+  color: transparent;
+  text-shadow: 0 0 0 #EA7667;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 30%;
+  text-align: center;
+  align-items: center;
+}
+#dayTicketing div a:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 279px) {
@@ -375,25 +421,11 @@ table {
   border-radius: 20px;
   background-color: #EA7667;
 }
-[name=click__day] div #dayTicketing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 90%;
-  height: 100%;
-  padding: 30px 0;
-  border-radius: 10px;
-  background-color: #EA9C5E;
-}
 [name=click__day] div div {
   height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-[name=click__day] div div a {
-  text-decoration: none;
-  color: black;
 }
 
 html {

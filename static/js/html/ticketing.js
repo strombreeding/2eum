@@ -9,6 +9,7 @@ const cancel = () => {
   }
   document.getElementById("cancel").nextElementSibling.id = "accept";
 };
+
 const accept = (id) => {
   if (id === "accept") {
     document.getElementById("accept").id = "makeTime";

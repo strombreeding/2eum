@@ -1,5 +1,5 @@
 <!DOCTYPE html >
-<html lang="ko">
+<html lang="ko" readonly="readonly">
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     <link rel="stylesheet" href="./static/css/style.css"/>
@@ -15,6 +15,10 @@
     <title></title>
     <script>
       const loggedIn = localStorage.getItem("loggedIn")==="true"
+      const baseUrl = "https://wetube-jinytree.herokuapp.com/api"
+      
+      //- const abc ="a.jinytree.shop"
+      //- const abc ="2eum.jinytree.shop"
       const abc ="2eum.jinytree.shop"
       let restKey ;
       let url;
@@ -25,8 +29,12 @@
     <div class="spinnerBox">
       <div class="spinner"><i class="fas fa-spinner fa-10x"></i></div>
     </div>
-    <footer>@ 이음 예약 2022</footer>
+    <footer>@ 이음 2022 
+      <p>producer Jinytree</p>
+      <p>version 1.0.0</p>
+    </footer>
   </body>
   <script src="./static/js/controllers/login_sosial.js"> </script>
   <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"> </script>
+  <script src="./static/js/html/startApp.js"> </script>
 </html>

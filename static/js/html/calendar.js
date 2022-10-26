@@ -137,21 +137,20 @@ const click_day = async (id) => {
     // url:`http://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
     type: "get",
     success: (res) => {
-      console.log(res);
+      // console.log(res);
     },
     error: (err) => {
       console.log(err);
       alert("아이코 알수없는 오류임");
     },
   });
-  dayData.reverse();
+
   console.log(dayData);
   for (let i = 0; i < dayData.length; i++) {
     const p = document.createElement("p");
     const dayTicketing = document.getElementById("dayTicketing");
-    p.textContent = `
-      ${dayData[i].date}시 
-      ${dayData[i].owner}
+    p.innerHTML = `
+      <span id='${dayData[i].date}' onclick='toggleTime(this.id)'>${dayData[i].date}시▶</span> 
     `;
     dayTicketing.appendChild(p);
   }
@@ -160,7 +159,9 @@ const click_day = async (id) => {
 
   // 위 요소에 자녀 추가하고, class를 ""로
 };
-
+function toggleTime(id) {
+  console.log(id);
+}
 // 시간대 형성
 
 const click_date = (id) => {
