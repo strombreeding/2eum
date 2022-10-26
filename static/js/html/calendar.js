@@ -1,9 +1,11 @@
+// 캘린더 html
+
 const date = new Date();
 // 달력 생성
 let currentMonth = date;
 let Month;
 let Day;
-// 로드시 캘린더 구현
+// makeCalendar = 바디로드시 캘린더 html 생성 함수
 const makeCalendar = async (date) => {
   // 현재의 년도와 월 받아오기
   const nowYear = new Date(date).getFullYear();
@@ -39,7 +41,6 @@ const makeCalendar = async (date) => {
 
   document.querySelector(`.dateBoard`).innerHTML = htmlDummy;
   document.querySelector(`.dateTitle`).innerText = `${nowYear}년 ${nowMonth}월`;
-  console.log("이제 어웨이트 들어간다");
   // 이번달 티켓팅 불러옴 (날짜,이름)
   const tickets = await $.ajax({
     // url:`http://localhost:4000/tickets?year=${nowYear}&month=${nowMonth}`,
@@ -52,7 +53,6 @@ const makeCalendar = async (date) => {
     },
   });
   console.log(tickets);
-  console.log(" 어웨이트 나왔다");
   // 아래 포문은 캘린더 날짜에 data-cnt 를 1 증가시켜줌.
   for (let i = 0; i < tickets.length; i++) {
     const ticketDay = tickets[i].day;
@@ -73,30 +73,30 @@ const makeCalendar = async (date) => {
     }
   }
 };
-// 첫 페이지 로드시, 로그인 여부에 따라 캘린더 노출
+// 로그인 상태에서 makeCalendar 함수 호출
 if (localStorage.getItem("loggedIn") === "true") {
   makeCalendar(date);
 
-  // 이전달 이동
+  // 이전달 이동 버튼 이벤트
   document.querySelector(`.prevDay`).onclick = () => {
     currentMonth = new Date(date.setMonth(date.getMonth() - 1));
     Month -= 1;
     console.log(Month);
-
     makeCalendar(currentMonth);
   };
 
-  // 다음달 이동
+  // 다음달 이동 버튼 이벤트
   document.querySelector(`.nextDay`).onclick = () => {
     currentMonth = new Date(date.setMonth(date.getMonth() + 1));
     Month += 1;
     console.log(Month);
-
     makeCalendar(currentMonth);
   };
 } else {
   document.getElementById("home").className = "hidden";
 }
+
+// 티켓 서비스 중 시간대 선택시 나타날 html 생성 함수
 const makeTimeTable = () => {
   const FullYear = document
     .getElementsByClassName("dateTitle")[0]
@@ -121,6 +121,9 @@ const makeTimeTable = () => {
 
   input.value = `${FullYear}.${Month}.${Day}`;
 };
+
+// 캘린더- 날짜 클릭
+// 현재 년,월,일 url에 담아서 get요청 => res{해당날짜 예약목록}
 const click_day = async (id) => {
   document.getElementById("ticket_plate").className = "hidden";
   document.getElementById("ticket_final").className = "hidden";
@@ -129,38 +132,42 @@ const click_day = async (id) => {
     .textContent.substring(0, 4);
   const Month = currentMonth.getMonth() + 1;
   Day = id;
-  console.log(FullYear, Month, Day);
-  const dayData = await $.ajax({
-    // 서버에서 티켓 서치/ url /tickets?year=YY&month=MM
-    // url:`http://localhost:4000/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
-    url: `https://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
-    // url:`http://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
-    type: "get",
-    success: (res) => {
-      // console.log(res);
-    },
-    error: (err) => {
-      console.log(err);
-      alert("아이코 알수없는 오류임");
-    },
-  });
-
-  console.log(dayData);
-  for (let i = 0; i < dayData.length; i++) {
-    const p = document.createElement("p");
-    const dayTicketing = document.getElementById("dayTicketing");
-    p.innerHTML = `
-      <span id='${dayData[i].date}' onclick='toggleTime(this.id)'>${dayData[i].date}시▶</span> 
-    `;
-    dayTicketing.appendChild(p);
+  try {
+    const data = await $.ajax({
+      // 서버에서 티켓 서치/ url /tickets?year=YY&month=MM
+      // url:`http://localhost:4000/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
+      url: `https://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
+      // url:`http://${abc}/tickets/day?year=${FullYear}&month=${Month}&day=${Day}`,
+      type: "get",
+      success: (res) => {
+        // console.log(res);
+        for (let i = 0; i < res.length; i++) {
+          const p = document.createElement("p");
+          const dayTicketing = document.getElementById("dayTicketing");
+          p.innerHTML = `
+            <span id='${res[i].date}' onclick='toggleTime(this.id)'>${res[i].date}시▶</span> 
+          `;
+          dayTicketing.appendChild(p);
+        }
+        const click__day = document.getElementsByName("click__day")[0];
+        click__day.className = "";
+        console.log(res);
+        return;
+      },
+      error: (err) => {
+        console.log(err);
+        alert("아이코 알수없는 오류임");
+        throw new Error(`${err}`);
+      },
+    });
+  } catch (err) {
+    alert(`error : ${err}`);
   }
-  const click__day = document.getElementsByName("click__day")[0];
-  click__day.className = "";
 
   // 위 요소에 자녀 추가하고, class를 ""로
 };
 function toggleTime(id) {
-  console.log(id);
+  document.console.log(id);
 }
 // 시간대 형성
 

@@ -70,7 +70,20 @@ table {
     display: none;
   }
 }
+@keyframes show__calendar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* 달력 */
+#home {
+  animation: show__calendar 0.7s;
+  -webkit-animation: show__calendar 0.7s;
+}
+
 .rap {
   display: flex;
   flex-direction: column;

@@ -26,7 +26,7 @@
   </head>
   <body> 
     <header id="header"></header>
-    <main>
+    <main id="main">
       <section id="splash"> </section>
       <article class="hidden"> </article>
       <section class="hidden" name="click__day">
@@ -36,7 +36,7 @@
           <div> <a id="cancel" onclick="cancel()">취소</a><a id="accept" onclick="accept(this.id)">계속  </a></div>
         </div>
       </section>
-      <section id="home"><div class='rap'>
+      <section class="hidden" id="home"><div class='rap'>
 <div class="header">
 <div class="btn prevDay"></div>
 <h2 class='dateTitle'></h2>
@@ -76,9 +76,9 @@
     <footer>@ 이음 2022 
       <p>producer Jinytree</p>
       <p>version 1.0.0</p>
+      <button id="btnSave">홈화면추가</button>
     </footer>
   </body>
-  <script src="./static/js/swInstall.js" defer="defer"></script>
   <script src="./static/js/install.js" defer="defer"></script>
   <script src="./static/js/html/calendar.js" defer="defer"></script>
   <script src="./static/js/html/header.js" defer="defer"></script>

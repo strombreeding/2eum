@@ -1,3 +1,5 @@
+// 로그인 | 비로그인 상태의 header html
+
 const header = document.getElementById("header");
 if (loggedIn) {
   header.innerHTML = `

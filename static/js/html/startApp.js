@@ -1,5 +1,8 @@
 const splash = document.getElementById("splash");
 window.addEventListener("load", () => {
+  if (sessionStorage.getItem("first_started") === null) {
+  } else {
+  }
   console.log(sessionStorage.getItem("first_started") === null);
   if (sessionStorage.getItem("first_started") === null) {
     splash.innerHTML = `
@@ -8,11 +11,24 @@ window.addEventListener("load", () => {
         `;
     setTimeout(() => {
       splash.remove();
+      document.getElementById("home").className = "";
       document.getElementsByTagName("article")[0].className = "";
     }, 3700);
     sessionStorage.setItem("first_started", "false");
   } else {
     console.log("esle");
     document.getElementsByTagName("article")[0].className = "";
+    document.getElementById("home").className = "";
   }
 });
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("sw.js") // serviceWorker 파일 경로
+      .then((reg) => {
+        console.log("Service worker registered.", reg);
+      })
+      .catch((e) => console.log(e));
+  });
+}
