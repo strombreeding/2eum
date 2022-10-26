@@ -20,7 +20,7 @@ if (loggedIn) {
       <button class="login" onclick="logout()">로그아웃</button>
     </div>
     `;
-  header.className = "header";
+  // header.className = "";
 }
 if (localStorage.getItem("loggedIn") !== "true") {
   const article = document.getElementsByTagName("article")[0];

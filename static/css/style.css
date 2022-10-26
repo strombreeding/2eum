@@ -78,6 +78,14 @@ table {
     opacity: 1;
   }
 }
+@keyframes show__header {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* 달력 */
 #home {
   animation: show__calendar 0.7s;
@@ -482,7 +490,9 @@ button {
   background-color: #978D71;
 }
 
-#header {
+header {
+  animation: show__header 0.7s;
+  -webkit-animation: show__header 0.7s;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -493,18 +503,18 @@ button {
   align-items: center;
   padding: 5px;
 }
-#header .home__btn {
+header .home__btn {
   display: flex;
   justify-content: center;
 }
-#header .header__list {
+header .header__list {
   display: flex;
   justify-content: center;
 }
-#header .header__profile {
+header .header__profile {
   cursor: pointer;
 }
-#header .header__profile .header__avatar {
+header .header__profile .header__avatar {
   width: 30px;
   height: 30px;
   border-radius: 50%;
