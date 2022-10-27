@@ -6,10 +6,10 @@
   "display": "standalone",
   "name": "이음예약",
   "orientation": "any",
-  "scope": "/",
+  "scope": "https://strombreeding.github.io/2eum/",
   "description":"이음 예약을 위한 앱",
   "short_name": "청년공간-이음",
-  "start_url": "/2eum",
+  "start_url": "https://strombreeding.github.io/2eum/",
   "icons": [
     {
       "src": "images/windows11/SmallTile.scale-100.png",
