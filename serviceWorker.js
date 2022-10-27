@@ -24,3 +24,15 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
+if ("serviceWorker" in navigator) {
+  console.log("서비스우커이따");
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./serviceWorker.js") // serviceWorker 파일 경로
+      .then((reg) => {
+        console.log("Service worker registered.", reg);
+      })
+      .catch((e) => console.log(e));
+  });
+}

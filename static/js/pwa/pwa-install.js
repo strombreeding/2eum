@@ -6,8 +6,8 @@ window.addEventListener("beforeinstallprompt", function (e) {
   e.preventDefault();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
-  btnSave.className = "";
 
+  btnSave.className = "";
   return false;
 });
 // 특정 버튼 클릭 시 설치 시작
