@@ -1,7 +1,7 @@
 const CACHE_NAME = "zz"; // 캐쉬 이름을 설정합니다.
 
 const FILES_TO_CACHE = [
-  "/offline.html", // 캐쉬할 페이지 or 파일 들을 설정합니다.
+  "/2eum/offline.html", // 캐쉬할 페이지 or 파일 들을 설정합니다.
 ];
 
 self.addEventListener("install", (event) => {
