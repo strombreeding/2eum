@@ -3,12 +3,13 @@
   "background_color": "#978D71",
   "dir": "auto",
   "lang":"ko",
-  "display": "fullscreen",
+  "display": "standalone",
   "name": "이음예약",
   "orientation": "any",
   "scope": "/",
+  "description":"이음 예약을 위한 앱",
   "short_name": "청년공간-이음",
-  "start_url": "https://strombreeding.github.io/2eum/",
+  "start_url": "http://127.0.0.1:5500/",
   "icons": [
     {
       "src": "images/windows11/SmallTile.scale-100.png",
@@ -412,7 +413,7 @@
     },
     {
       "src": "images/android/android-launchericon-512-512.png",
-      "sizes": "512x512",
+      "sizes": "any",
       "type": "image/png"
     },
     {
