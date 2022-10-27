@@ -9,7 +9,7 @@
   "scope": "/",
   "description":"이음 예약을 위한 앱",
   "short_name": "청년공간-이음",
-  "start_url": "http://127.0.0.1:5500/",
+  "start_url": "rombreeding.github.io/2eum/",
   "icons": [
     {
       "src": "images/windows11/SmallTile.scale-100.png",
