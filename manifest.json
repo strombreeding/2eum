@@ -1,6 +1,7 @@
 
 {
   "background_color": "#978D71",
+   "theme_color": "#978d71",
   "dir": "auto",
   "lang":"ko",
   "display": "standalone",
@@ -413,7 +414,7 @@
     },
     {
       "src": "images/android/android-launchericon-512-512.png",
-      "sizes": "any",
+      "sizes": "512x512",
       "type": "image/png"
     },
     {
