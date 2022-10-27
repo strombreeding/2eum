@@ -9,7 +9,7 @@ if ("serviceWorker" in navigator) {
 }
 const CACHE_NAME = "offline"; // 캐쉬 이름을 설정합니다.
 const FILES_TO_CACHE = [
-  "./offline.html", // 캐쉬할 페이지 or 파일 들을 설정합니다.
+  "/2eum/offline.html", // 캐쉬할 페이지 or 파일 들을 설정합니다.
 ];
 self.addEventListener("install", (event) => {
   console.log(event);
@@ -27,7 +27,7 @@ self.addEventListener("fetch", (event) => {
     fetch(event.request).catch(() => {
       return caches
         .open(CACHE_NAME)
-        .then((cache) => cache.match("/offline.html"));
+        .then((cache) => cache.match("/2eum/offline.html"));
     })
   );
 });
