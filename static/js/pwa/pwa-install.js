@@ -1,15 +1,15 @@
+const btnSave = document.getElementById("btnSave");
 var deferredPrompt;
 
 window.addEventListener("beforeinstallprompt", function (e) {
   console.log("beforeinstallprompt Event fired");
   e.preventDefault();
-
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
+  btnSave.className = "";
 
   return false;
 });
-const btnSave = document.getElementById("btnSave");
 // 특정 버튼 클릭 시 설치 시작
 btnSave.addEventListener("click", function () {
   console.log("install");
@@ -33,3 +33,11 @@ btnSave.addEventListener("click", function () {
     });
   }
 });
+//
+// btnSave.addEventListener("click", () => {
+//   Notification.requestPermission().then((result) => {
+//     if (result === "granted") {
+//       ServiceWorkerRegistration.randomNotification();
+//     }
+//   });
+// });
