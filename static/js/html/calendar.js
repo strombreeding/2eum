@@ -31,7 +31,7 @@ const makeCalendar = async (date) => {
 
   // 현재 날짜 표시하기 및 날짜 클릭
   for (let i = 1; i <= lastDay; i++) {
-    htmlDummy += `<div class="div" id='${i}' data-cnt="" onclick=click_day(this.id)>${i}</div>`;
+    htmlDummy += `<div class="div" id='d${i}' name=d${i} onclick=click_day(this.id)>${i}</div>`;
   }
 
   // 다음달 날짜 표시하기
@@ -97,7 +97,7 @@ if (localStorage.getItem("loggedIn") === "true") {
 }
 
 // 티켓 서비스 중 시간대 선택시 나타날 html 생성 함수
-const makeTimeTable = () => {
+function makeTimeTable() {
   const FullYear = document
     .getElementsByClassName("dateTitle")[0]
     .textContent.substring(0, 4);
@@ -120,11 +120,11 @@ const makeTimeTable = () => {
   }
 
   input.value = `${FullYear}.${Month}.${Day}`;
-};
+}
 
 // 캘린더- 날짜 클릭
 // 현재 년,월,일 url에 담아서 get요청 => res{해당날짜 예약목록}
-const click_day = async (id) => {
+async function click_day(id) {
   document.getElementById("ticket_plate").className = "hidden";
   document.getElementById("ticket_final").className = "hidden";
   const FullYear = document
@@ -165,14 +165,14 @@ const click_day = async (id) => {
   }
 
   // 위 요소에 자녀 추가하고, class를 ""로
-};
+}
 function toggleTime(id) {
   document.console.log(id);
 }
 // 시간대 형성
 
-const click_date = (id) => {
+function click_date(id) {
   const input = document.getElementsByName("날짜")[1];
   input.value = ``;
   input.value += `${id}시`;
-};
+}

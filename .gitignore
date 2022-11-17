@@ -2,4 +2,4 @@
 /static/views
 /static/ts
 /node_modules
-
+/.env
